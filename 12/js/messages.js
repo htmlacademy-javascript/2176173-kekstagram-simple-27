@@ -1,11 +1,11 @@
-import {isEscapeKey} from './util.js';
+import { isEscapeKey } from './util.js';
 
 const errorMessageTemplate = document.querySelector('#error').content.querySelector('.error');
 const successMessageTemplate = document.querySelector('#success').content.querySelector('.success');
 
 const showMessage = (messageTemplate) => {
   const messageElement = messageTemplate.cloneNode(true);
-  const closeButton = messageElement.querySelector('.button');
+  const closeButton = messageElement.querySelector('button');
 
   function hideMessage () {
     messageElement.remove();
@@ -14,9 +14,8 @@ const showMessage = (messageTemplate) => {
   const onEscKeydown = (evt) => {
     if (isEscapeKey(evt)) {
       evt.preventDefault();
-      evt.stopPropagation();
-      document.removeEventListener('keydown', onEscKeydown);
       hideMessage();
+      document.removeEventListener('keydown', onEscKeydown);
     }
   };
 
