@@ -1,17 +1,8 @@
-const descriptions = [
-  'Описание фотографии 1',
-  'Описание фотографии 2',
-  'Описание фотографии 3',
-  'Описание фотографии 4',
-  'Описание фотографии 5',
-  'Описание фотографии 6',
-];
-const MIN_LENGTH = 20;
-const MAX_LENGTH = 140;
 const SCALE_STEP = 25;
 const MIN_SCALE = 25;
 const MAX_SCALE = 100;
 const DEFAULT_SCALE = 100;
+const ALERT_SHOW_TIME = 5000;
 
 const EFFECTS = [
   {
@@ -62,4 +53,4 @@ const EFFECTS = [
   },
 ];
 
-export { descriptions, MIN_LENGTH, MAX_LENGTH, EFFECTS, SCALE_STEP, MIN_SCALE, MAX_SCALE, DEFAULT_SCALE };
+export { EFFECTS, SCALE_STEP, MIN_SCALE, MAX_SCALE, DEFAULT_SCALE, ALERT_SHOW_TIME };
